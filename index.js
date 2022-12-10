@@ -5,7 +5,9 @@ const app = express();
 
 app.get("/", (req, res, next) => {
 
-    const key = ""
+    
+    const steamId = req.query;
+    const key = process.env.API_KEY;
     const apiUrl = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/"
     const url = `${apiUrl}?key=${key}&steamids=${steamId}`;
 
