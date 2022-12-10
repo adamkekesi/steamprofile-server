@@ -4,7 +4,9 @@ var axios = require('axios');
 const app = express();
 
 app.get("/", (req, res, next) => {
+
     const steamId = req.query.steamId;
+    console.log(steamId)
     const key = process.env.API_KEY;
     const apiUrl = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/"
     const url = `${apiUrl}?key=${key}&steamids=${steamId}`;
