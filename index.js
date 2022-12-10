@@ -16,18 +16,18 @@ app.get("/", (req, res, next) => {
         headers: {}
     };
 
-console.log(key)
 
     axios(config)
         .then(function (response) {
-            console.log(JSON.stringify(response.data));
+            console.log(response.data)
+            res.send(response.data)
         })
         .catch(function (error) {
             console.log(error);
+            res.send("Hiba")
         });
 
 
-    res.send("asdasd")
 });
 
 app.listen(3000)
