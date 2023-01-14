@@ -36,7 +36,7 @@ app.get("/", (req, res, next) => {
 app.get("/owned-games", (req, res, nex) => {
     const steamId = req.query.steamId;
     const apiUrl = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/"
-    const url = `${apiUrl}?key=${key}&steamid${steamId}&include_appinfo=true&include_played_free_games=true`;
+    const url = `${apiUrl}?key=${key}&steamid=${steamId}&include_appinfo=true&include_played_free_games=true`;
     var config = {
         method: 'get',
         url: url,
